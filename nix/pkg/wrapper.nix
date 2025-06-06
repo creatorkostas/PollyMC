@@ -4,7 +4,7 @@
   symlinkJoin,
   pollymc-unwrapped,
   wrapQtAppsHook,
-  addOpenGLRunpath,
+  addDriverRunpath,
   qtbase, # needed for wrapQtAppsHook
   qtsvg,
   qtwayland,
