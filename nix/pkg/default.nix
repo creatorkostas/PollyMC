@@ -1,7 +1,7 @@
 {
   lib,
   stdenv,
-  canonicalize-jars-hook,
+  stripJavaArchivesHook,
   cmake,
   cmark,
   Cocoa,
@@ -27,7 +27,7 @@ assert lib.assertMsg (stdenv.isLinux || !gamemodeSupport) "gamemodeSupport is on
 
     src = lib.cleanSource self;
 
-    nativeBuildInputs = [extra-cmake-modules cmake jdk17 ninja canonicalize-jars-hook];
+    nativeBuildInputs = [extra-cmake-modules cmake jdk17 ninja stripJavaArchivesHook];
     buildInputs =
       [
         qtbase
