@@ -45,6 +45,10 @@
         inherit (inputs) libnbtplusplus;
         inherit ((final.darwin or prev.darwin).apple_sdk.frameworks) Cocoa;
         inherit version;
+
+        # extra-cmake-modules top-level alias was removed in nixpkgs-unstable (Plasma 5 EOL)
+        # Explicitly use the KDE 6 / Qt 6 version from kdePackages
+        extra-cmake-modules = prev.kdePackages.extra-cmake-modules;
       };
     in {
       pollymc-unwrapped = prev.qt6Packages.callPackage ./pkg unwrappedArgs;
