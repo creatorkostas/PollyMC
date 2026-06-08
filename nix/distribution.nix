@@ -13,8 +13,6 @@
     in {
       inherit
         (ourPackages)
-        pollymc-qt5-unwrapped
-        pollymc-qt5
         pollymc-unwrapped
         pollymc
         ;
@@ -49,12 +47,6 @@
         inherit version;
       };
     in {
-      pollymc-qt5-unwrapped = prev.libsForQt5.callPackage ./pkg unwrappedArgs;
-
-      pollymc-qt5 = prev.libsForQt5.callPackage ./pkg/wrapper.nix {
-        pollymc-unwrapped = final.pollymc-qt5-unwrapped;
-      };
-
       pollymc-unwrapped = prev.qt6Packages.callPackage ./pkg unwrappedArgs;
 
       pollymc = prev.qt6Packages.callPackage ./pkg/wrapper.nix {

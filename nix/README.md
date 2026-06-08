@@ -174,16 +174,15 @@ nix-env -iA prismlauncher.prismlauncher
 
 ## Package variants
 
-Both Nixpkgs and this repository offer the following packages:
+This repository offers the following packages:
 
-- `prismlauncher` - Preferred build using Qt 6
-- `prismlauncher-qt5` - Legacy build using Qt 5 (i.e. for Qt 5 theming support)
+- `pollymc` - Build using Qt 6
 
-Both of these packages also have `-unwrapped` counterparts, that are not wrapped and can therefore be customized even further than what the wrapper packages offer.
+This package also has an `-unwrapped` counterpart, that is not wrapped and can therefore be customized even further than what the wrapper package offers.
 
 ### Customizing wrapped packages
 
-The wrapped packages (`prismlauncher` and `prismlauncher-qt5`) offer some build parameters to further customize the launcher's environment.
+The wrapped package (`pollymc`) offers some build parameters to further customize the launcher's environment.
 
 The following parameters can be overridden:
 
