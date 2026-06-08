@@ -40,7 +40,7 @@ assert lib.assertMsg (stdenv.isLinux || !gamemodeSupport) "gamemodeSupport is on
       ++ lib.optional gamemodeSupport gamemode
       ++ lib.optionals stdenv.isDarwin [Cocoa];
 
-    hardeningEnable = lib.optionals stdenv.isLinux ["pie"];
+    # hardeningEnable = lib.optionals stdenv.isLinux ["pie"];
 
     cmakeFlags =
       [
